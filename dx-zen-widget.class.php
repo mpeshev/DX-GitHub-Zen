@@ -99,7 +99,7 @@ class DX_GitHub_Zen_Widget extends WP_Widget {
 				'after_zen' => '</p>'
 		);
 
-		$instance = array_merge( $instance, $instance_defaults );
+		$instance = wp_parse_args( $instance, $instance_defaults );
 
         $title = esc_attr( $instance[ 'title' ] );
         $timeout = esc_attr( $instance[ 'timeout' ] );
